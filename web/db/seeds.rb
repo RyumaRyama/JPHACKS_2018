@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#
+lab = Array.new()
+15.times do
+  lab << Faker::Japanese::Name.last_name # https://github.com/tily/ruby-faker-japanese
+end
+
+60.times do |n|
+  email = Faker::Internet.email
+  gpa = format("%.2f",rand(0.0..3.9)).to_f
+  password = "password"
+  User.create!(id: n+1,
+               ie_number: "0057#{sprintf("%02d",n+1)}",
+               email: email,
+               gpa: gpa,
+               lab: lab.sample,
+               password: password,
+               password_confirmation: password,
+               )
+end
