@@ -7,9 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #
 lab = Array.new()
-15.times do
-  lab << Faker::Japanese::Name.last_name # https://github.com/tily/ruby-faker-japanese
-end
+# 15.times do
+#   lab << Faker::Japanese::Name.last_name # https://github.com/tily/ruby-faker-japanese
+# end
+
+lab = ["長田・谷口","玉城","和田","長山","名嘉村","遠藤","山田","赤嶺","河野","岡崎","吉田","姜","宮里","國田","當間"]
 
 60.times do |n|
   email = Faker::Internet.email
