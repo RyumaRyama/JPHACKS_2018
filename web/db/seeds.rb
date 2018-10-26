@@ -15,7 +15,7 @@ lab = ["長田・谷口","玉城","和田","長山","名嘉村","遠藤","山田
 
 60.times do |n|
   email = Faker::Internet.email
-  gpa = format("%.2f",rand(0.0..3.9)).to_f
+  gpa = format("%.2f",rand(0.0..3.9))
   password = "password"
   User.create!(id: n+1,
                ie_number: "0057#{sprintf("%02d",n+1)}",
