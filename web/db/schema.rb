@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2018_10_25_024249) do
   create_table "users", force: :cascade do |t|
     t.string "ie_number"
     t.string "email"
-    t.float "gpa"
+    t.string "gpa"
     t.string "lab"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
